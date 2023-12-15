@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Main2.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">laba2</a> &gt; <a href="index.source.html" class="el_package">org.example</a> &gt; <span class="el_source">Main2.java</span></div><h1>Main2.java</h1><pre class="source lang-java linenums">package org.example;
+
+import java.util.Scanner;
+
+<span class="nc" id="L5">public class Main2 {</span>
+    public static void main(String[] args) {
+<span class="nc" id="L7">        tt();</span>
+<span class="nc" id="L8">    }</span>
+
+    private static boolean isLeapYear(int year) {
+<span class="nc bnc" id="L11" title="All 2 branches missed.">        if (year % 4 == 0) {</span>
+<span class="nc" id="L12">            return true;</span>
+        } else {
+<span class="nc" id="L14">            return false;</span>
+        }
+    }
+
+    public static String tt() {
+<span class="nc" id="L19">        Scanner scanner = new Scanner(System.in);</span>
+<span class="nc" id="L20">        int score = 0;</span>
+        while (true) {
+<span class="nc" id="L22">            System.out.println(&quot;Р’РІРµРґРёС‚Рµ РіРѕРґ РІ С„РѕСЂРјР°С‚Рµ \&quot;yyyy\&quot; РєРѕР»РёС‡РµСЃС‚РІРѕ-РґРЅРµР№&quot;);</span>
+<span class="nc" id="L23">            int year = scanner.nextInt();</span>
+<span class="nc" id="L24">            int days = scanner.nextInt();</span>
+<span class="nc bnc" id="L25" title="All 4 branches missed.">            if (isLeapYear(year) &amp;&amp; days == 366) {</span>
+<span class="nc" id="L26">                score++;</span>
+<span class="nc bnc" id="L27" title="All 4 branches missed.">            } else if (!isLeapYear(year) &amp;&amp; days == 365) {</span>
+<span class="nc" id="L28">                score++;</span>
+            } else {
+<span class="nc bnc" id="L30" title="All 2 branches missed.">                if (isLeapYear(year)) {</span>
+<span class="nc" id="L31">                    System.out.println(&quot;РќРµРїСЂР°РІРёР»СЊРЅРѕ! Р’ СЌС‚РѕРј РіРѕРґСѓ 366 РґРЅРµР№!&quot;);</span>
+                } else {
+<span class="nc" id="L33">                    System.out.println(&quot;РќРµРїСЂР°РІРёР»СЊРЅРѕ! Р’ СЌС‚РѕРј РіРѕРґСѓ 365 РґРЅРµР№!&quot;);</span>
+                }
+<span class="nc" id="L35">                System.out.println(&quot;РќР°Р±СЂР°РЅРѕ РѕС‡РєРѕРІ:&quot; + score);</span>
+<span class="nc" id="L36">                break;</span>
+            }
+<span class="nc" id="L38">        }</span>
+<span class="nc" id="L39">        return null;</span>
+    }
+
+}
+
+
+
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
